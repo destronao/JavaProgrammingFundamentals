@@ -69,7 +69,7 @@ java-programming-fundamentals/
 │
 ├─ .gitignore
 └─ README.md
-
+```
 
 La estructura puede ampliarse o reorganizarse conforme avance el aprendizaje.
 
