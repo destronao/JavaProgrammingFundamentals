@@ -40,35 +40,42 @@ Estos ejercicios no buscan ser proyectos finales, sino **práctica controlada y 
 
 ## Estructura del repositorio
 
-Esto solo representara como seria la estructura del proyecto.
 ```text
 java-programming-fundamentals/
 ├─ src/
-│  ├─ class-activities/
-│  │  ├─ 01-methods/
-│  │  │  ├─ Exercise01.java
-│  │  │  ├─ Exercise02.java
-│  │  │  └─ README.md
-│  │  ├─ 02-conditionals/
-│  │  │  ├─ Exercise01.java
-│  │  │  └─ README.md
-│  │  └─ 03-loops/
-│  │     ├─ Exercise01.java
-│  │     └─ README.md
+│  ├─ classActivities/
+│  │  ├─ _01_BasicStructuresJava/
+│  │  │  ├─ activities/
+│  │  │  │  └─ README.md
+│  │  │  ├─ practices/
+│  │  │  │  └─ README.md
+│  │  │
+│  │  ├─ _02_ControlStructures/
+│  │  │  ├─ activities/
+│  │  │  │  └─ README.md
+│  │  │  ├─ practices/
+│  │  │  │  └─ README.md
+│  │  │
+│  │  ├─ _03_POO/
+│  │  │  ├─ activities/
+│  │  │  │  └─ README.md
+│  │  │  ├─ practices/
+│  │  │  │  └─ README.md
 │  │
-│  ├─ learning-projects/
-│  │  ├─ calculator/
+│  ├─ learningProjects/
+│  │  ├─ calculator/ 
 │  │  │  ├─ Main.java
 │  │  │  └─ README.md
-│  │  └─ task-manager/
-│  │     ├─ Main.java
-│  │     └─ README.md
+│  │  ├─ task-manager/
+│  │  │  ├─ Main.java
+│  │  │  └─ README.md
 │  │
-│  └─ notes/
-│     └─ README.md
+│  ├─ notes/
+│  │  └─ README.md
 │
 ├─ .gitignore
 └─ README.md
+
 ```
 
 La estructura puede ampliarse o reorganizarse conforme avance el aprendizaje.
