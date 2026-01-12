@@ -24,7 +24,7 @@ import java.util.Scanner;
  * restricciones del ejercicio.
  * </p>
  */
-public class Actvidad07 {
+public class Actividad07 {
 	
 	private static boolean mayorDeEdad;
 	private static final Scanner SC = new Scanner(System.in); 
