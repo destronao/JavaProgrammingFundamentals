@@ -55,11 +55,9 @@ public class Actividad10 {
 	 */
 	private static char scanGender() {
 		char gender;
-		while (true) {
-			System.out.print("Indique el género de la muestra: ");
-			gender = SC.next().toUpperCase().charAt(0);
-			break;
-		}
+		System.out.print("Indique el género de la muestra: ");
+		gender = SC.next().toUpperCase().charAt(0);
+			
 		return gender;
 		
 	}
