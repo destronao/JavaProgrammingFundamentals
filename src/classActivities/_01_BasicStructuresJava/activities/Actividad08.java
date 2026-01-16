@@ -4,31 +4,27 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Actividad 7 – Mayor de edad.
+ * Actividad 08 – Edad para trabajar.
  * <p>
- * Solicita al usuario su edad por teclado y determina si es mayor de edad.
+ * Solicita al usuario su edad por consola y determina si se encuentra
+ * en edad legal para trabajar, considerando el rango entre 16 y 65 años
+ * (ambos inclusive).
  * </p>
  *
  * <p>
  * El programa:
  * <ul>
  *   <li>Lee la edad del usuario como un número entero.</li>
- *   <li>Valida la entrada para evitar errores de formato.</li>
- *   <li>Evalúa si la edad es mayor o igual a 18.</li>
- *   <li>Muestra el resultado por pantalla como un valor booleano.</li>
+ *   <li>Controla errores de formato en la entrada.</li>
+ *   <li>Evalúa si la edad está dentro del rango permitido.</li>
+ *   <li>Muestra el resultado como un valor booleano.</li>
  * </ul>
  * </p>
- *
- * <p>
- * Nota: No se utiliza la estructura {@code if} para cumplir con las
- * restricciones del ejercicio.
- * </p>
  */
-public class Actvidad07 {
+public class Actividad08 {
 	
-	private static boolean mayorDeEdad;
+	private static boolean edadTrabajar;
 	private static final Scanner SC = new Scanner(System.in); 
-	
 	/**
 	 * Solicita al usuario su edad por consola.
 	 * <p>
@@ -53,13 +49,24 @@ public class Actvidad07 {
 		}
 		return edad;
 	}
+	
+	/**
+	 * Determina si una edad se encuentra dentro del rango legal para trabajar.
+	 *
+	 * @param age edad a evaluar
+	 * @return {@code true} si la edad está entre 16 y 65 años, {@code false} en caso contrario
+	 */
+	private static boolean ageForWork(int age) {
+		return age>=16 && age <=65;
+	}
+	
 	public static void main(String[] args) {
 		int edad;
 		
 		edad = scanAge();
-		mayorDeEdad = edad>=18;
-		System.out.println("Mayor de edad: " + mayorDeEdad);
-		
+		edadTrabajar = ageForWork (edad);
+		System.out.println("En edad de trabajar: " + edadTrabajar);
+
 	}
 
 }
