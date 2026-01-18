@@ -5,7 +5,7 @@ Enunciados oficiales de las actividades de la Unidad 5.
 ## Actividad 1. Vector
 Crear un paquete de nombre: `actividad1`.
 
-Crear una clase llamada `Vector` con las siguientes características: :contentReference[oaicite:6]{index=6}
+Crear una clase llamada `Vector` con las siguientes características:
 
 1. Como atributo tendrá un Array unidimensional (v) de enteros solo accesible desde la propia clase y otro atributo (posVacia) que será la primera posición vacía del vector donde podemos introducir un valor (solo accesible desde la propia clase).  
    Nota: recuerda mantener siempre actualizado el atributo posVacia.
@@ -44,7 +44,7 @@ Crear una clase llamada `Vector` con las siguientes características: :contentRe
 - Crear una clase con método `main` para que llame, al menos, una vez a cada método. :contentReference[oaicite:7]{index=7}
 
 ## Actividad 2. Tabla
-Crear un paquete de nombre: `actividad2`. :contentReference[oaicite:8]{index=8}
+Crear un paquete de nombre: `actividad2`.
 
 Crear una clase llamada `Tabla` con las siguientes características:
 1. Como atributo tendrá un Array bidimensional (t) de enteros solo accesible desde la propia clase.
@@ -61,10 +61,10 @@ Crear una clase llamada `Tabla` con las siguientes características:
 7. `obtener(int fila, int columna)`: retorna el elemento de la posición determinada por los parámetros.
 
 Crear una clase con método `main` para que llame, al menos, una vez a cada método.
-Nota: se propone como ampliación la realización de los mismos métodos que la actividad 1. :contentReference[oaicite:9]{index=9}
+Nota: se propone como ampliación la realización de los mismos métodos que la actividad 1.
 
 ## Actividad 3. Lista dinámica
-Crear un paquete de nombre: `actividad3`. :contentReference[oaicite:10]{index=10}
+Crear un paquete de nombre: `actividad3`. 
 
 Crear una clase llamada `ListaDinamica` con las siguientes características:
 1. Como atributo tendrá un `ArrayList<Integer>` de enteros solo accesible desde la propia clase.
@@ -79,4 +79,4 @@ Crear una clase llamada `ListaDinamica` con las siguientes características:
 10. `insertar(int indice, Integer valor)`: inserta en el índice si es posible; si no, lo añade al final.
 11. `copiar(ArrayList<Integer> lista)`: copia los elementos en la lista pasada por argumento (si tuviese elementos, se borran previamente).
 12. `borrarTodos(Integer valor)`: elimina todos los elementos que coincidan con el valor.
-13. `ordenar()`: ordena la lista de menor a mayor. :contentReference[oaicite:11]{index=11}
+13. `ordenar()`: ordena la lista de menor a mayor.
