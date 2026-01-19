@@ -52,16 +52,14 @@ public class Vector {
 		if (posVacia<=1) {
 			return true;
 		}
-		int numMayor = enteros[0];
 		for (int i = 1; i<enteros.length;i++) {
-			if (enteros[i]<numMayor) {
+			if (enteros[i]>enteros[i+1]) {
 				return false;
 			}
-			numMayor = enteros[i];
 		}
 		return true;
 	}
-	
+	//TODO: boolean estaOrdenado que almacene si el vector esta ordenado.
 	public int buscar(int num) {
 		if (estaOrdenado()) {
 			for (int i = 0; i < enteros.length;i++) {
@@ -204,7 +202,8 @@ public class Vector {
 		return minimo;
 	}
 	
-	public void ordena() {
+	public void ordenaMenorMayor() {
+
 		/*
 		 * Cocktail sort restricted
 		 * leemos de izq a der si el siguiente es menor intercambiamos valores
@@ -272,10 +271,20 @@ public class Vector {
 			enteros[posVacia] = elemento;
 		}
 		posVacia++;
-		
 	}
 	
 	public void borrar (int elemento) {
+		int posNueva=0;
+		for (int i = 0; i < posVacia;i++) {
+			if (enteros[i]==elemento) {
+				continue;
+			}
+			enteros[posNueva]=enteros[i];
+			posNueva++;
+		}
+		posVacia = posNueva;
 		
 	}
+	 
+	
 }
