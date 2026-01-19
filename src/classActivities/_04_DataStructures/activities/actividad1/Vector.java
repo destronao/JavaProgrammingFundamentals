@@ -141,6 +141,8 @@ public class Vector {
 		return false;
 	}
 	
+	
+	
 	public void eliminarUltimos (int numElementos) {
 		for (int i = posVacia-1; i < (posVacia-numElementos);i--) {
 			enteros[i]=0;
@@ -245,5 +247,35 @@ public class Vector {
 				return;
 			}
 		}
+	}
+	
+	public void insertar (int elemento) {
+		if (estaCompleto()) {
+			System.out.println("El vector esta lleno. No se puede insertar un valor.");
+			return;
+		}
+		if(estaOrdenado()) {
+			int aux;
+			for (int i = 0; i < posVacia+1;i++) {
+				if (i == posVacia) {
+					enteros[i]=elemento;
+					continue;
+				}
+				if (enteros[i]< elemento) {
+					continue;
+				}
+				aux = enteros[i];
+				enteros[i]=elemento;
+				elemento = aux;
+			}
+		} else {
+			enteros[posVacia] = elemento;
+		}
+		posVacia++;
+		
+	}
+	
+	public void borrar (int elemento) {
+		
 	}
 }
