@@ -26,14 +26,14 @@ public class Vector {
 	 * @param tamaño capacidad del vector (número máximo de elementos que puede almacenar)
 	 * @throws IllegalArgumentException si tamaño <= 0
 	 */
-	Vector (int tamaño){
+	public Vector (int tamaño){
 		if (tamaño > 0 ) {
 			enteros = new int[tamaño];
 			posVacia = 0;
 			this.rellenar();
 			orden = Orden.NONE;
 		} else {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("No puedes crear un vector de tamaño menor o igual que 0.");
 		}
 	} 
 	
@@ -274,11 +274,12 @@ public class Vector {
 	
 	public void invertir () {
 		int aux;
+		int j = posVacia -1;
 		for (int i = 0; i < posVacia/2; i++) {
-			int j = posVacia -1 - i;
 			aux = enteros[i];
 			enteros[i]=enteros[j];
 			enteros[j]= aux;
+			j--;
 		}
 		if (orden == Orden.ASC) {
 			orden = Orden.DESC;
@@ -297,6 +298,7 @@ public class Vector {
 		if (!estaCompleto()) {
 			enteros[posVacia] = elemento;
 			posVacia++;
+			orden = Orden.NONE;
 			return true;
 		}
 		return false;
@@ -394,6 +396,20 @@ public class Vector {
 		}
 		return minimo;
 	}
+	
+	
+	public void ordena(Orden orden) {
+		if (orden == Orden.ASC) {
+			ordenaMenorMayor();
+			return;
+		}
+		else if (orden == Orden.DESC) {
+			ordenaMayorMenor();
+			return;
+		}
+		return;
+	}
+	
 	/**
 	 * Ordena los elementos almacenados en orden ascendente (menor a mayor).
 	 *
@@ -401,6 +417,10 @@ public class Vector {
 	 */
 	public void ordenaMenorMayor() {	
 		if (orden == Orden.ASC) {
+			return;
+		}
+		if (orden == Orden.DESC) {
+			invertir();
 			return;
 		}
 		
@@ -492,10 +512,10 @@ public class Vector {
 	 *
 	 * @param elemento valor a insertar
 	 */
-	public void insertar (int elemento) {
+	public boolean insertar (int elemento) {
 		if (estaCompleto()) {
 			System.out.println("El vector esta lleno. No se puede insertar un valor.");
-			return;
+			return false;
 		}
 		if(orden == Orden.ASC) {
 			int aux;
@@ -529,6 +549,7 @@ public class Vector {
 			enteros[posVacia] = elemento;
 		}
 		posVacia++;
+		return true;
 	}
 	/**
 	 * Elimina todas las apariciones del valor indicado del vector lógico.
@@ -552,5 +573,10 @@ public class Vector {
 	public Orden getOrden() {
 	    return orden;
 	}
-	
+	public int getPosVacia() {
+		return posVacia;
+	}
+	public int getValue(int indice) {
+		return enteros[indice];
+	}
 }
