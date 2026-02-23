@@ -1,9 +1,9 @@
-package classActivities._04_DataStructures.activities.actividad2;
+package classActivities.ud4.activities.actividad2;
 
 import java.util.Random;
 
-import classActivities._04_DataStructures.activities.actividad1.Orden;
-import classActivities._04_DataStructures.activities.actividad1.Vector;
+import classActivities.ud4.activities.actividad1.Orden;
+import classActivities.ud4.activities.actividad1.Vector;
 
 /**
  * Implementa una tabla (matriz) de enteros de tamaño fijo con gestión lógica de ocupación.

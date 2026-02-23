@@ -1,13 +1,12 @@
-package classActivities._01_BasicStructuresJava.activities;
+package classActivities.ud1.activities;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Actividad 6 – Circunferencia.
+ * Actividad 5 – Esfera.
  * <p>
- * Calcula el perímetro de una circunferencia a partir del radio introducido
- * por teclado.
+ * Calcula el volumen de una esfera a partir de un radio introducido por teclado.
  * </p>
  *
  * <p>
@@ -16,7 +15,7 @@ import java.util.Scanner;
  *   <li>Define una constante para el valor de PI.</li>
  *   <li>Solicita al usuario un radio de tipo real.</li>
  *   <li>Valida la entrada del usuario.</li>
- *   <li>Calcula el perímetro usando la fórmula matemática correspondiente.</li>
+ *   <li>Calcula el volumen de la esfera usando la fórmula matemática correspondiente.</li>
  * </ul>
  * </p>
  *
@@ -24,28 +23,28 @@ import java.util.Scanner;
  * Nota: No se utiliza la clase {@code Math} según los requisitos del ejercicio.
  * </p>
  */
-public class Actividad06 {
-	
+public class Actividad05 {
+	//Con Math.PI tendriamos el valor de PI pero se pide  no Usar Math
 	private static final double PI = 3.14;
-	
 	private static final Scanner SC = new Scanner(System.in);
 	
 	/**
-	 * Calcula el perímetro de una circunferencia a partir de su radio.
+	 * Calcula el volumen de una esfera a partir de su radio.
 	 *
-	 * @param radius radio de la circunferencia (debe ser mayor o igual que 0)
-	 * @return perímetro de la circunferencia
+	 * @param radius radio de la esfera (debe ser mayor o igual que 0)
+	 * @return volumen de la esfera
 	 * @throws IllegalArgumentException si el radio es negativo
 	 */
-	private static double getCirclePerimeter(double radius) {
-		if (radius <0 ) {
+	private static double  getSphereVolume (double radius) {
+		if (radius < 0 ) {
 			throw new IllegalArgumentException("radius can´t be negative.");
 		}
-		return 2*PI*radius;
+		return 4.0/3.0 * PI * radius * radius * radius; 
+		//Con Math.pow se podria expresar mejor la potencia
 	}
 	
 	/**
-	 * Solicita al usuario el radio de la circunferencia por consola.
+	 * Solicita al usuario el radio de la esfera por consola.
 	 * <p>
 	 * Controla errores de formato y repite la lectura hasta que se introduce
 	 * un valor numérico válido.
@@ -56,7 +55,7 @@ public class Actividad06 {
 	private static double scanRadius() {
 		double radius;
 		while (true) {
-			System.out.print("Indique el radio del circulo.");
+			System.out.print("Indique el radio de la esfera.");
 			try {
 				radius = SC.nextDouble();
 			} catch (InputMismatchException e) {
@@ -71,12 +70,12 @@ public class Actividad06 {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("Bienvenido, vamos a calular el perimetro de una circunferencia.");
+		
+		System.out.println("Bienvenido, vamos a calular el volumen de una esfera.");
 		double radius = scanRadius();
-		double longitud = getCirclePerimeter(radius);
-		System.out.println("El perimetro de la circunferencia de radio " + radius + " es de " + longitud);
+		double volume = getSphereVolume(radius);
+		System.out.println("El volumen de la esfera de radio " + radius + " es de " + volume);
 		SC.close();
-
 	}
 
 }

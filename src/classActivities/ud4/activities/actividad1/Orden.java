@@ -1,4 +1,4 @@
-package classActivities._04_DataStructures.activities.actividad1;
+package classActivities.ud4.activities.actividad1;
 
 /**
  * Enumeración que representa el tipo de ordenación
