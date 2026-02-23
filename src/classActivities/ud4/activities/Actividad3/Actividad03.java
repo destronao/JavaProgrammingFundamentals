@@ -1,4 +1,4 @@
-package classActivities._04_DataStructures.activities.Actividad3;
+package classActivities.ud4.activities.Actividad3;
 
 import java.util.ArrayList;
 

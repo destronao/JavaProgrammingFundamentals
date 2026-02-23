@@ -1,4 +1,4 @@
-package classActivities._04_DataStructures.activities.actividad2;
+package classActivities.ud4.activities.actividad2;
 
 /**
  * Representa una posición dentro de una tabla bidimensional,

@@ -1,40 +1,18 @@
 # Java Programming Fundamentals
 
-Este repositorio recoge **actividades académicas realizadas en clase** y **pequeños ejercicios de aprendizaje** desarrollados en Java como parte de mi formación en programación.
+Este repositorio recoge **actividades académicas realizadas en clase y pequeños ejercicios de aprendizaje** desarrollados en Java como parte de mi formación en programación.
 
-El objetivo principal es **consolidar las bases del lenguaje**, documentar el progreso y reflejar la evolución del código a medida que se adquieren nuevos conocimientos.
+El objetivo principal es consolidar las bases del lenguaje, documentar el progreso y reflejar la evolución del código a medida que se adquieren nuevos conocimientos.
 
 ---
 
 ## Contexto
 
-Actualmente estoy estudiando programación utilizando **Java como lenguaje principal**.  
-Los contenidos de este repositorio siguen el **orden del temario visto en clase** y se amplían con ejercicios adicionales cuando es necesario reforzar algún concepto.
+Actualmente estoy estudiando programación utilizando Java como lenguaje principal.
 
----
+Los contenidos de este repositorio siguen el orden del temario visto en clase y se amplían con ejercicios adicionales cuando es necesario reforzar algún concepto.
 
-## Contenido
-
-### Actividades de clase
-Ejercicios propuestos durante las clases para practicar conceptos fundamentales como:
-- Métodos y funciones
-- Condicionales
-- Bucles
-- Estructuras básicas
-- Organización del código
-
-Las actividades están organizadas por temas y numeradas según el orden en el que se han visto.
-
----
-
-### Ejercicios y proyectos de aprendizaje
-Pequeños programas desarrollados para:
-- Aplicar los conceptos aprendidos en un contexto práctico
-- Mejorar la lógica y la resolución de problemas
-- Practicar la modularidad y la legibilidad del código
-- Aprender a estructurar proyectos sencillos en Java
-
-Estos ejercicios no buscan ser proyectos finales, sino **práctica controlada y progresiva**.
+El proyecto está organizado por unidades didácticas (`ud1`, `ud2`, `ud3`, etc.), siguiendo una estructura de paquetes coherente y profesional.
 
 ---
 
@@ -44,19 +22,31 @@ Estos ejercicios no buscan ser proyectos finales, sino **práctica controlada y 
 java-programming-fundamentals/
 ├─ src/
 │  ├─ classActivities/
-│  │  ├─ _01_BasicStructuresJava/
+│  │  ├─ ud1/
 │  │  │  ├─ activities/
 │  │  │  │  └─ README.md
 │  │  │  ├─ practices/
 │  │  │  │  └─ README.md
 │  │  │
-│  │  ├─ _02_ControlStructures/
+│  │  ├─ ud2/
 │  │  │  ├─ activities/
 │  │  │  │  └─ README.md
 │  │  │  ├─ practices/
 │  │  │  │  └─ README.md
 │  │  │
-│  │  ├─ _03_POO/
+│  │  ├─ ud3/
+│  │  │  ├─ activities/
+│  │  │  │  └─ README.md
+│  │  │  ├─ practices/
+│  │  │  │  └─ README.md
+│  │  │
+│  │  ├─ ud4/
+│  │  │  ├─ activities/
+│  │  │  │  └─ README.md
+│  │  │  ├─ practices/
+│  │  │  │  └─ README.md
+│  │  │
+│  │  ├─ ud5/
 │  │  │  ├─ activities/
 │  │  │  │  └─ README.md
 │  │  │  ├─ practices/
@@ -71,6 +61,7 @@ java-programming-fundamentals/
 │  │  │  └─ README.md
 │  │
 │  ├─ notes/
+│  │  ├─ sprints/
 │  │  └─ README.md
 │
 ├─ .gitignore
@@ -82,29 +73,71 @@ La estructura puede ampliarse o reorganizarse conforme avance el aprendizaje.
 
 ---
 
+## Contenido por unidades
+
+### UD1 – Estructuras básicas de Java
+- Variables y tipos de datos
+- Métodos
+- Sintaxis básica
+- Ejercicios introductorios
+
+### UD2 – Estructuras de control
+- Condicionales
+- Bucles
+- Lógica de decisión
+- Control de flujo
+
+### UD3 – Programación Orientada a Objetos
+- Clases y objetos
+- Encapsulación
+- Constructores
+- Organización básica del código
+
+### UD4 – Estructuras de datos
+- Arrays
+- Implementación de estructuras personalizadas (Vector)
+- Uso de ArrayList
+- Búsqueda y ordenación
+- Refactorización y documentación con Javadoc
+
+### UD5 – Herencia y Polimorfismo
+- Jerarquías de clases
+- Sobrescritura de métodos
+- Uso de `super`
+- Clases abstractas
+- Interfaces
+- Polimorfismo en colecciones
+- Uso de `instanceof`
+
+---
+
 ## Evolución y mantenimiento
 
 Este repositorio se mantiene de forma activa:
-- Se revisan ejercicios antiguos
-- Se refactoriza código cuando se aprende una mejor solución
-- Se mejoran nombres de métodos y variables
-- Se añade documentación cuando es necesaria
 
-El historial de commits refleja esta evolución progresiva.
+- Se revisan ejercicios antiguos cuando se aprenden mejores soluciones
+- Se refactoriza código para mejorar claridad y estructura
+- Se unifican nombres de paquetes y convenciones
+- Se añade documentación cuando es necesaria
+- Se aplican prácticas de control de versiones (branching, pull requests)
+
+El historial de commits refleja esta evolución progresiva y el proceso de mejora continua.
 
 ---
 
 ## Objetivos de aprendizaje
 
 - Afianzar una base sólida en programación con Java
-- Desarrollar hábitos de código limpio y ordenado
-- Aprender a dividir problemas en partes pequeñas
+- Aplicar principios de código limpio y ordenado
+- Aprender a dividir problemas complejos en partes pequeñas
 - Mejorar la capacidad de análisis y refactorización
-- Preparar una base técnica para proyectos más complejos en el futuro
+- Practicar organización profesional de proyectos
+- Simular un flujo de trabajo similar al entorno profesional
 
 ---
 
 ## Nota
 
-Este repositorio tiene un enfoque **educativo**.  
-Se prioriza la claridad, la comprensión y el aprendizaje sobre la optimización avanzada o el uso de librerías externas.
+Este repositorio tiene un enfoque educativo.
+
+Se prioriza la claridad, la comprensión y el aprendizaje progresivo sobre la optimización avanzada o el uso de librerías externas.

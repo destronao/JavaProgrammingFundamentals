@@ -1,9 +1,9 @@
-package classActivities._04_DataStructures.activities.Actividad3;
+package classActivities.ud4.activities.Actividad3;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import classActivities._04_DataStructures.activities.actividad1.Orden;
+import classActivities.ud4.activities.actividad1.Orden;
 
 /**
  * Implementa una lista dinámica de enteros basada en {@link ArrayList}.

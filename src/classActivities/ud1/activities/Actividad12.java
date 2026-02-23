@@ -1,4 +1,4 @@
-package classActivities._01_BasicStructuresJava.activities;
+package classActivities.ud1.activities;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
