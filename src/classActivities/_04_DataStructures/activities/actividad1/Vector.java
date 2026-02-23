@@ -12,8 +12,13 @@ import java.util.Random;
  * ASC (ascendente), DESC (descendente) o NONE (sin orden garantizado).</p>
  */
 public class Vector {
+	/** Array interno que almacena los enteros del vector. */
 	private int[] enteros;
+
+	/** Índice de la primera posición libre del vector (tamaño lógico). */
 	private int posVacia;
+
+	/** Estado actual de ordenación del vector lógico. */
 	private Orden orden;
 	
 	
@@ -24,7 +29,7 @@ public class Vector {
 	 * {@link Orden#NONE}.</p>
 	 *
 	 * @param tamaño capacidad del vector (número máximo de elementos que puede almacenar)
-	 * @throws IllegalArgumentException si tamaño <= 0
+	 * @throws IllegalArgumentException si tamaño es menor o igual a 0
 	 */
 	public Vector (int tamaño){
 		if (tamaño > 0 ) {
@@ -272,6 +277,12 @@ public class Vector {
 		return suma;
 	}
 	
+	/**
+	 * Invierte el orden del contenido lógico del vector.
+	 *
+	 * <p>Solo afecta al rango {@code [0, posVacia)}. Si el estado de orden era
+	 * {@link Orden#ASC} pasa a {@link Orden#DESC} y viceversa.</p>
+	 */
 	public void invertir () {
 		int aux;
 		int j = posVacia -1;
@@ -397,7 +408,17 @@ public class Vector {
 		return minimo;
 	}
 	
-	
+	/**
+	 * Ordena el vector según el tipo de orden indicado.
+	 *
+	 * <ul>
+	 *   <li>{@link Orden#ASC}: ordena de menor a mayor.</li>
+	 *   <li>{@link Orden#DESC}: ordena de mayor a menor.</li>
+	 *   <li>{@link Orden#NONE}: no realiza ninguna acción.</li>
+	 * </ul>
+	 *
+	 * @param orden tipo de ordenación a aplicar.
+	 */
 	public void ordena(Orden orden) {
 		if (orden == Orden.ASC) {
 			ordenaMenorMayor();
@@ -511,6 +532,7 @@ public class Vector {
 	 * En cualquier otro caso, añade el elemento al final.</p>
 	 *
 	 * @param elemento valor a insertar
+	 * @return {@code true} si consigue insertar el elemento, {@code false} en caso contrario
 	 */
 	public boolean insertar (int elemento) {
 		if (estaCompleto()) {
@@ -570,12 +592,35 @@ public class Vector {
 		posVacia = posNueva;
 		
 	}
+	
+	/**
+	 * Retorna el estado actual de ordenación del vector lógico.
+	 *
+	 * @return orden actual del vector.
+	 */
 	public Orden getOrden() {
 	    return orden;
 	}
+	
+	/**
+	 * Retorna el índice de la primera posición libre.
+	 *
+	 * <p>Equivale al tamaño lógico del vector.</p>
+	 *
+	 * @return índice de la primera posición libre.
+	 */
 	public int getPosVacia() {
 		return posVacia;
 	}
+	
+	/**
+	 * Retorna el valor almacenado en el array interno en el índice indicado.
+	 *
+	 * <p>No valida si el índice pertenece al rango lógico del vector.</p>
+	 *
+	 * @param indice índice del array interno.
+	 * @return valor almacenado en el índice indicado.
+	 */
 	public int getValue(int indice) {
 		return enteros[indice];
 	}

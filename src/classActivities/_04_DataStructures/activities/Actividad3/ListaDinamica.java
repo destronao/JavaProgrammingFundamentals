@@ -176,9 +176,9 @@ public class ListaDinamica {
      * @param listaExterna lista desde la cual se copian elementos.
      * @return {@code true} si se copia; {@code false} si {@code listaExterna} es {@code null}.
      */
-	public boolean copiar(ArrayList<Integer> lista) {
+	public boolean copiar(ArrayList<Integer> listaExterna) {
 		this.lista.clear();
-		return this.lista.addAll(lista);
+		return this.lista.addAll(listaExterna);
 	}
 	
 	/**
